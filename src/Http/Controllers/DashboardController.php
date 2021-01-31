@@ -9,6 +9,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('adminPanel::layouts.master');
+        return view('admin-panel::layouts.master');
     }
 }

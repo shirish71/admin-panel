@@ -8,14 +8,14 @@
     <link href="{{asset('apple-touch-icon.png')}}" rel="apple-touch-icon">
     <link href="{{asset('favicon.png')}}" rel="icon">
     <title>@yield('title', config('app.name')) || {{config('app.name')}}</title>
-    @include('adminPanel::layouts.styles')
+    @include('admin-panel::layouts.styles')
     @yield('styles')
 </head>
 
 <body class="hold-transition sidebar-mini text-sm">
 <div class="wrapper">
-    @include('adminPanel::layouts.navbar')
-    @include('adminPanel::layouts.sidebar')
+    @include('admin-panel::layouts.navbar')
+    @include('admin-panel::layouts.sidebar')
     <div class="content-wrapper">
         @yield('content')
     </div>
@@ -35,7 +35,7 @@
     </footer>
 </div>
 @yield('modal')
-@include('adminPanel::layouts.scripts')
+@include('admin-panel::layouts.scripts')
 @stack('scripts')
 </body>
 </html>
