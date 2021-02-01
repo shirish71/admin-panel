@@ -15,11 +15,11 @@
         "unisharp/laravel-filemanager": "^2.1.0",
         "spatie/laravel-activitylog": "^3.16",
         "realrashid/sweet-alert": "^3.1.6",
-        "yajra/laravel-datatables-oracle": "^9.11.0"
-    },
-    "require-dev": {
+        "yajra/laravel-datatables-oracle": "^9.11.0",
         "barryvdh/laravel-debugbar": "^3.4.2",
         "beyondcode/laravel-query-detector": "^1.4"
+    },
+    "require-dev": {
     },
     "autoload": {
         "psr-4": {
@@ -41,8 +41,11 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "php artisan optimize",
-            "php artisan vendor:publish"
+            "@php artisan optimize",
+            "@php artisan vendor:publish --provider=\"Spatie\\Permission\\PermissionServiceProvider\";"
+        ],
+        "post-package-update": [
+            "@php artisan vendor:publish --provider=\"Spatie\\Permission\\PermissionServiceProvider\";"
         ]
     }
 }
