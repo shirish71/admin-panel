@@ -10,11 +10,16 @@ class AdminPanelServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/views', 'admin-panel');
-        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
         $this->publishes([
             __DIR__ . '/public/admin/plugins' => public_path('vendor/shirish71/admin-panel'),
             __DIR__ . '/config/admin-panel.php' => config_path('admin-panel.php')
         ], 'public');
+    }
+
+    public function handle()
+    {
+
     }
 
     public function register()

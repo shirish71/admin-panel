@@ -41,7 +41,8 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php artisan vendor:publish --provider= \"Spatie\\Permission\\PermissionServiceProvider\";"
+            "php artisan optimize",
+            "php artisan vendor:publish"
         ]
     }
 }
