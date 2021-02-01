@@ -15,6 +15,11 @@ class AdminPanelServiceProvider extends ServiceProvider
             __DIR__ . '/public/admin/plugins' => public_path('vendor/shirish71/admin-panel'),
             __DIR__ . '/config/admin-panel.php' => config_path('admin-panel.php')
         ], 'public');
+
+        if ($this->app->runningInConsole()) {
+//            $this->registerPublishableResources();
+            $this->registerConsoleCommands();
+        }
     }
 
     public function handle()
@@ -22,8 +27,8 @@ class AdminPanelServiceProvider extends ServiceProvider
 
     }
 
-    public function register()
+    private function registerConsoleCommands()
     {
-
+        $this->commands(Commands\AdminPanelCommand::class);
     }
 }

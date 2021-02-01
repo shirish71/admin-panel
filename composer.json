@@ -40,12 +40,16 @@
         }
     },
     "scripts": {
+        "post-autoload-dump": [
+            "@php artisan vendor:publish --provider=\"Spatie\\Permission\\PermissionServiceProvider\""
+        ],
         "post-install-cmd": [
             "@php artisan optimize",
-            "@php artisan vendor:publish --provider=\"Spatie\\Permission\\PermissionServiceProvider\";"
+            "@php artisan admin:install"
         ],
         "post-package-update": [
-            "@php artisan vendor:publish --provider=\"Spatie\\Permission\\PermissionServiceProvider\";"
+            "@php artisan optimize",
+            "@php artisan admin:install"
         ]
     }
 }
