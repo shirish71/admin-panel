@@ -11,13 +11,15 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "barryvdh/laravel-debugbar": "^3.4.2",
+        "beyondcode/laravel-query-detector": "^1.4",
+        "garygreen/pretty-routes": "^1.0.10",
+        "laravel/jetstream": "^2.1",
+        "realrashid/sweet-alert": "^3.1.6",
+        "spatie/laravel-activitylog": "^3.16",
         "spatie/laravel-permission": "^3.16",
         "unisharp/laravel-filemanager": "^2.1.0",
-        "spatie/laravel-activitylog": "^3.16",
-        "realrashid/sweet-alert": "^3.1.6",
-        "yajra/laravel-datatables-oracle": "^9.11.0",
-        "barryvdh/laravel-debugbar": "^3.4.2",
-        "beyondcode/laravel-query-detector": "^1.4"
+        "yajra/laravel-datatables-oracle": "^9.11.0"
     },
     "require-dev": {
     },
