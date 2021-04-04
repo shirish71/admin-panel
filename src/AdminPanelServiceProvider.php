@@ -14,7 +14,7 @@ class AdminPanelServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/public/admin/plugins' => public_path('vendor/shirish71/admin-panel'),
             __DIR__ . '/public/admin/assets' => public_path('vendor/shirish71/admin-panel/assets'),
-            __DIR__ . '/resources/views/assets' => public_path('vendor/shirish71/admin-panel/'),
+            __DIR__ . '/resources/views/assets' => public_path('vendor/shirish71/admin-panel'),
             __DIR__ . '/config/auth.php' => config_path('auth.php'),
             __DIR__ . '/config/admin-panel.php' => config_path('admin-panel.php')
         ], 'public');
